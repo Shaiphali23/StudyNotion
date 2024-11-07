@@ -17,7 +17,7 @@ dotenv.config();
 //middlewares
 app.use(
   cors({
-    origin: "https://study-notion-dww6s9g2n-shaiphali-jaiswals-projects.vercel.app",
+    origin: ["https://study-notion-dww6s9g2n-shaiphali-jaiswals-projects.vercel.app", "http://localhost:3000"],
     credentials: true,
   })
 );
