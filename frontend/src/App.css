@@ -3,11 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
-.homepage_bg{
-background: url("../src/assets/Images/bghome.svg");
+.homepage_bg {
+  background: url("../src/assets/Images/bghome.svg");
 }
 
 input[type="number"]::-webkit-outer-spin-button,
