@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {auth} = require("../middlewares/auth");
+const { auth } = require("../middlewares/auth");
 
 //Auth Routes
 const {
@@ -12,7 +12,7 @@ const {
 router.post("/sendOtp", sendOTP);
 router.post("/register", register);
 router.post("/login", login);
-router.post("/changePassword",auth, changePassword);
+router.post("/changePassword", auth, changePassword);
 
 // Reset Password routes
 const {

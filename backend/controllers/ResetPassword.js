@@ -28,7 +28,7 @@ exports.resetPasswordToken = async (req, res) => {
         token: token,
         resetPasswordExpires: Date.now() + 5 * 60 * 1000,
       },
-      { new: true }
+      { new: true },
     );
 
     //create url
@@ -38,7 +38,7 @@ exports.resetPasswordToken = async (req, res) => {
     await mailSender(
       email,
       "Password reset Link",
-      `Password reset Link: ${url}`
+      `Password reset Link: ${url}`,
     );
 
     //return response
@@ -103,7 +103,7 @@ exports.resetPassword = async (req, res) => {
     await User.findOneAndUpdate(
       { token: token },
       { password: hashedPassword },
-      { new: true }
+      { new: true },
     );
 
     //return response

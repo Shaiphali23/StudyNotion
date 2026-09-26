@@ -67,6 +67,8 @@ exports.register = async (req, res) => {
       otp,
     } = req.body;
 
+    console.log("Registration data:", req.body);
+
     //data validate
     if (
       !firstName ||
@@ -197,7 +199,7 @@ exports.login = async (req, res) => {
       id: user._id,
       accountType: user.accountType,
     };
-    
+
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
       expiresIn: "2h",
     });

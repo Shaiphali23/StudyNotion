@@ -13,6 +13,3 @@ exports.cloudinaryConnect = () => {
     console.log("Cloudinary connection error:", error);
   }
 };
-
-
-
